@@ -14,7 +14,7 @@ if ($this->is('single')) {
 ?>
 
 <?php
-$topCids = array_filter(explode('||', $this->options->topPost));
+$topCids = array_filter(explode('||', !empty($this->options->topPost) ? $this->options->topPost : ''));
 
 foreach ($topCids as $cid): ?>
     <?php $this->widget('Widget_Archive@icefox' . $cid, 'pageSize=1&type=post', 'cid=' . $cid)->to($item); ?>

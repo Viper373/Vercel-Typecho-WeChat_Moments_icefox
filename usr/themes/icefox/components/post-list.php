@@ -12,7 +12,7 @@ if ($this->is('single')) {
     $isSingle = true;
     $lineClamp = '';
 }
-$topCids = explode('||', $this->options->topPost);
+$topCids = explode('||', !empty($this->options->topPost) ? $this->options->topPost : '');
 ?>
 
 <?php
