@@ -46,5 +46,3 @@ $db->addServer(array(
     'sslCa' => dirname(__FILE__) . '/' . $_ENV["TYPECHO_SSL_CA"],
 ), Typecho_Db::READ | Typecho_Db::WRITE);
 Typecho_Db::set($db);
-
-define('__TYPECHO_DEBUG__', true);
